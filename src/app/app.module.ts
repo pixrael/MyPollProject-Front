@@ -4,7 +4,9 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
+import { MaterialModule } from './material/material.module';
+import { WelcomeModule } from './welcome/welcome.module';
+
 
 @NgModule({
   declarations: [
@@ -12,9 +14,10 @@ import { MatButtonModule } from '@angular/material/button';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
     BrowserAnimationsModule,
-    MatButtonModule
+    AppRoutingModule,
+    MaterialModule,
+    WelcomeModule
   ],
   providers: [],
   bootstrap: [AppComponent]
