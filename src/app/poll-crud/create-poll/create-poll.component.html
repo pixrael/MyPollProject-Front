@@ -1,6 +1,40 @@
 <div class="back-content">
-   <div class="background-content">
-   </div>
+   <div class="background-content"></div>
    <div class="title">My Poll Project</div>
    <div class="subtitle"> Create poll </div>
+   <div class="body-section">
+      <mat-card>
+         <form [formGroup]="createFormField" class="form">
+            <mat-form-field class="mat-form-field-class">
+               <mat-label>Poll Name:</mat-label>
+               <input formControlName="namePoll" matInput>
+            </mat-form-field>
+
+            <mat-card>
+               Candidates
+
+               <mat-grid-list cols="2" rowHeight="2:1">
+                  <mat-grid-tile>
+                     <mat-card class="example-card">
+                        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+                           alt="Photo of a Shiba Inu">
+                        <mat-card-content>
+                           <p>
+                              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
+                              Japan.
+                              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
+                              originally
+                              bred for hunting.
+                           </p>
+                        </mat-card-content>
+                     </mat-card>
+                  </mat-grid-tile>
+                  <mat-grid-tile>2</mat-grid-tile>
+                  <mat-grid-tile>3</mat-grid-tile>
+                  <mat-grid-tile>4</mat-grid-tile>
+               </mat-grid-list>
+            </mat-card>
+         </form>
+      </mat-card>
+   </div>
 </div>

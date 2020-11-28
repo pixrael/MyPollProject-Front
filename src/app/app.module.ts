@@ -7,6 +7,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { WelcomeModule } from './welcome/welcome.module';
 import { PollCrudModule } from './poll-crud/poll-crud.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 
 
 @NgModule({
@@ -17,6 +19,8 @@ import { PollCrudModule } from './poll-crud/poll-crud.module';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
     MaterialModule,
     WelcomeModule,
     PollCrudModule
