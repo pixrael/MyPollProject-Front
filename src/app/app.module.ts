@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { WelcomeModule } from './welcome/welcome.module';
+import { PollCrudModule } from './poll-crud/poll-crud.module';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { WelcomeModule } from './welcome/welcome.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     MaterialModule,
-    WelcomeModule
+    WelcomeModule,
+    PollCrudModule
   ],
   providers: [],
   bootstrap: [AppComponent]
