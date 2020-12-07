@@ -10,28 +10,12 @@
                <input formControlName="namePoll" matInput>
             </mat-form-field>
 
-            <mat-card>
+            <mat-card class="candidates-container">
                Candidates
-
-               <mat-grid-list cols="2" rowHeight="2:1">
-                  <mat-grid-tile>
-                     <mat-card class="example-card">
-                        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-                           alt="Photo of a Shiba Inu">
-                        <mat-card-content>
-                           <p>
-                              The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from
-                              Japan.
-                              A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was
-                              originally
-                              bred for hunting.
-                           </p>
-                        </mat-card-content>
-                     </mat-card>
+               <mat-grid-list cols="4" rowHeight="150px">
+                  <mat-grid-tile *ngFor="let i of [1,2,3,4,5,6,7,8]">
+                     <app-candidate-element></app-candidate-element>
                   </mat-grid-tile>
-                  <mat-grid-tile>2</mat-grid-tile>
-                  <mat-grid-tile>3</mat-grid-tile>
-                  <mat-grid-tile>4</mat-grid-tile>
                </mat-grid-list>
             </mat-card>
          </form>
