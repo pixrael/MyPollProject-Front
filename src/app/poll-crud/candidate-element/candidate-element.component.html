@@ -1,4 +1,22 @@
-<div>
+<div *ngIf="currentState==='add'">
+   <button mat-fab color="primary" aria-label="Example icon button with a delete icon"
+      (click)="onAddButtonClick($event)">
+      <mat-icon>add_box</mat-icon>
+   </button>
+</div>
+<div *ngIf="currentState==='empty'">
+   <div class="image-mat-card">
+      <button mat-fab color="primary" aria-label="Example icon button with a delete icon"
+         (click)="onAddButtonClick($event)">
+         <mat-icon>add_photo_alternate</mat-icon>
+      </button>
+   </div>
+   <div class="description-mat-card">
+      <textarea matInput placeholder="Add Description"></textarea>
+   </div>
+</div>
+
+<div *ngIf="currentState==='editable'">
    <div class="image-mat-card">
       <img src="https://www.aramon.com/blog/wp-content/uploads/2019/03/foto-dia-00622.jpg">
    </div>
