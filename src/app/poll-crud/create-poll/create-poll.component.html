@@ -13,8 +13,12 @@
             <mat-card class="candidates-container">
                Candidates
                <mat-grid-list cols="4" rowHeight="150px">
-                  <mat-grid-tile *ngFor="let candidate of candidates.controls">
-                     <app-candidate-element [currentState]="candidate.controls.state.value">
+                  <mat-grid-tile *ngFor="let candidate of candidates.controls;let i = index;">
+                     <app-candidate-element class="app-candidate-element"
+                        [currentState]="candidate.controls.state.value" [urlImage]="candidate.controls.imageUrl.value"
+                        [description]="candidate.controls.description.value" (addNewCandidate)="onAddNewCandidate()"
+                        (addNewImageUrl)="onAddNewImageUrl($event,i)"
+                        (addNewDescription)="onAddNewDescription($event,i)">
                      </app-candidate-element>
                   </mat-grid-tile>
                </mat-grid-list>

@@ -8,10 +8,7 @@ export class CreatePollStateService {
 
   private poll: PollModel = {
     name: '',
-    candidates: [{
-      imageUrl: 'http://...',
-      description: 'descri'
-    }]
+    candidates: []
   };
 
   constructor() { }
