@@ -7,14 +7,15 @@
          <form [formGroup]="createFormField" class="form">
             <mat-form-field class="mat-form-field-class">
                <mat-label>Poll Name:</mat-label>
-               <input formControlName="namePoll" matInput>
+               <input formControlName="name" matInput>
             </mat-form-field>
 
             <mat-card class="candidates-container">
                Candidates
                <mat-grid-list cols="4" rowHeight="150px">
-                  <mat-grid-tile *ngFor="let i of [1,2,3,4,5,6,7,8]">
-                     <app-candidate-element></app-candidate-element>
+                  <mat-grid-tile *ngFor="let candidate of candidates.controls">
+                     <app-candidate-element [currentState]="candidate.controls.state.value">
+                     </app-candidate-element>
                   </mat-grid-tile>
                </mat-grid-list>
             </mat-card>

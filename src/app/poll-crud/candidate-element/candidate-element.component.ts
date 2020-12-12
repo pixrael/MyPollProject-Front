@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 export enum CANDIDATE_STATE {
   ADD = 'add',
@@ -14,7 +14,7 @@ export enum CANDIDATE_STATE {
 })
 export class CandidateElementComponent implements OnInit {
 
-  currentState = CANDIDATE_STATE.EMPTY;
+  @Input() currentState: CANDIDATE_STATE;
 
   constructor() { }
 
